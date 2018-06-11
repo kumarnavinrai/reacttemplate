@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "sdkVersion": "26.0.0",
+    android: {
+       package: "com.example.myapp"
+    }
+  },
+  "name": "conferenceApp",
+  "displayName": "conferenceApp"
+}
