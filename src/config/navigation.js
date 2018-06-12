@@ -1,15 +1,22 @@
 import React from 'react';
 import { TabNavigator, StackNavigator, TabBarBottom } from 'react-navigation';
 import Icon from 'react-native-vector-icons/Feather';
-import { LocationScreen, AboutScreen, SpeakersScreen, ScheduleScreen }  from '../screens';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { LocationScreen, AboutScreen, SpeakersScreen, ScheduleScreen, LandingScreen, LoginScreen }  from '../screens';
 import { Header } from '../components';
 import config from '../config';
 
 export default StackNavigator({
   Main: {
-        screen: AboutScreen,
+        screen: LandingScreen,
         navigationOptions: (props) => ({
-            title: "About",
+            title: "Landing",
+        })
+  },
+  LoginScreen: {
+        screen: LoginScreen,
+        navigationOptions: (props) => ({
+            title: "Login",
         })
   },
   TabScreen: {
@@ -45,18 +52,21 @@ export default StackNavigator({
             const { routeName } = navigation.state;
             let iconName;
             if (routeName === 'Schedule') {
-              iconName = 'calendar';
+              iconName = 'leaf';
             } else if (routeName === 'Speakers') {
-              iconName = 'users';
+              iconName = 'home';
             } else if (routeName === 'Map') {
-              iconName = 'map';
+              iconName = 'user';
             } else if (routeName === 'About') {
               iconName = 'info';
             }
+
+            return <FontAwesome name={iconName} size={25} color={tintColor} />;
             return <Icon name={iconName} size={25} color={tintColor} />;
           }
         }),
         tabBarOptions: {
+          showLabel: false,
           activeTintColor: config.SECONDARY_BG_COLOR,
           inactiveTintColor: config.PRIMARY_TEXT_COLOR,
           activeBackgroundColor: config.PRIMARY_BG_COLOR,
