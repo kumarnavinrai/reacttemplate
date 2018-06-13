@@ -23,6 +23,76 @@ export default StyleSheet.create({
     alignItems: 'flex-start',
     flexDirection: 'row'
   },
+  landingp: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'powderblue'
+  },
+  dareyoutext: {
+    width: 350, 
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: "25%", 
+    backgroundColor: 'skyblue'
+  },
+   youtext: {
+    width: 350, 
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: "5%", 
+    backgroundColor: 'steelblue'
+  },
+  darename: {
+    color: "#dfdfdf",
+    textAlign: 'center',
+    fontSize: 80, 
+    fontWeight: "900"
+  },
+  areyouname: {
+    color: "#dfdfdf",
+    textAlign: 'center',
+    fontSize: 18
+  },
+  thecname: {
+    color: "#dfdfdf",
+    textAlign: 'center',
+    fontSize: 18
+  },
+  areyouup: {
+    width: 350,  
+    height: 25, 
+    backgroundColor: 'skyblue'
+  },
+  thec: {
+    width: 350,  
+    height: 25,
+    backgroundColor: 'steelblue'
+  },
+  btnwrap: {
+    width: 350,  
+    height: 80,
+    marginTop: "35%",
+    backgroundColor: 'skyblue'
+  },
+  submitstart:{
+    marginRight:40,
+    marginLeft:40,
+    marginTop:10,
+    paddingTop:20,
+    paddingBottom:20,
+    backgroundColor:'#68a0cf',
+    borderRadius:30,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  submitstartText:{
+      color:'#fff',
+      textAlign:'center',
+  },
   author: {
     flex: 1,
     marginTop: 20,

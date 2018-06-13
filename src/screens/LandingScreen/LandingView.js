@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  ScrollView, View, Text, Image, Button
+  ScrollView, View, Text, Image, Button, TouchableHighlight
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import styles from './style.js';
 import config from '../../config';
+
 
 class LandingView extends Component {
 
@@ -40,33 +41,30 @@ class LandingView extends Component {
   render() {
     return (
       <ScrollView>
-        <Image
-          source={{uri: this.props.conference.banner}}
-          style={styles.banner}
-        />
-        <View style={styles.container}>
-          <Text style={styles.title}>Landing-{this.props.conference.name}</Text>
-          <View style={styles.info}>
-            <Icon.Button name="calendar" backgroundColor="transparent" color={config.PRIMARY_BG_COLOR}>
-              <Text>{this.props.conference.date}</Text>
-            </Icon.Button>
-            <Icon.Button name="map-pin" backgroundColor="transparent" color={config.PRIMARY_BG_COLOR}>
-              <Text>{(this.props.conference.location||{}).city}</Text>
-            </Icon.Button>
+        <View style={styles.landingp}>
+          <View style={styles.dareyoutext}>
+              <Text style={styles.darename}>DARE</Text>
           </View>
-          <Text style={styles.description}>{this.props.conference.description}</Text>
-          <Button onPress = { this.FunctionToOpenSecondActivity } title = 'Click Here'/>
-          <View style={styles.author}>
-            <Image
-              source={{uri: 'https://avatars3.githubusercontent.com/u/17863319?s=460&v=4'}}
-              style={styles.avatar}
-            />
-            <View>
-              <Text style={styles.name}>App Developer Info:</Text>
-              <Text>Lex Martinez</Text>
-              <Text style={styles.link}>me@lexmartinez.com</Text>
-            </View>
+          <View style={styles.youtext}>
+              <Text style={styles.darename}>YOU</Text>
           </View>
+          <View style={styles.areyouup}>
+              <Text style={styles.areyouname}>Are you up for</Text>
+          </View>
+          <View style={styles.thec}>
+              <Text style={styles.thecname}>the challenge?</Text>
+          </View>
+          <View style={styles.btnwrap}>
+              
+              <TouchableHighlight
+                style={styles.submitstart}
+                onPress={() => this.FunctionToOpenSecondActivity(this.props)}
+                underlayColor='#fff'>
+                  <Text style={styles.submitstartText}>Start</Text>
+              </TouchableHighlight>
+          </View>
+          
+         
         </View>
       </ScrollView>
     );

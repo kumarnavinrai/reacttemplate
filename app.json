@@ -1,10 +1,57 @@
 {
   "expo": {
     "sdkVersion": "26.0.0",
-    android: {
-       package: "com.example.myapp"
-    }
+	  "ios": {
+	    "bundleIdentifier": "com.dare.you",
+	    "buildNumber": "1.0.0",
+	    "icon": "./src/assets/resources/icon.png",
+	    "supportsTablet": true,
+	    "splash": {
+	      "backgroundColor": "#3E46AB",
+	      "resizeMode": "cover",
+	      "image": "./src/assets/resources/splash.png",
+	    },
+	  },
+	  "android": {
+	    "package": "com.dare.you",
+	    "icon": "./src/assets/resources/icon.png",
+	    "permissions": [
+	      "CAMERA",
+	      "READ_CONTACTS",
+	      "RECORD_AUDIO"
+	    ],
+	    "splash": {
+	      "backgroundColor": "#3E46AB",
+	      "resizeMode": "cover",
+	      "image": "./src/assets/resources/splash.png"
+
+	      /*
+	        Local path or remote url to an image to fill the background of the loading screen. 
+	        Image size and aspect ratio are up to you. 
+	        Must be a .png.
+	      
+	      "ldpi": STRING,
+	      "mdpi": STRING,
+	      "hdpi": STRING,
+	      "xhdpi": STRING,
+	      "xxhdpi": STRING,
+	      "xxxhdpi": STRING
+	      */
+	    }
+	  }
+   
   },
-  "name": "conferenceApp",
-  "displayName": "conferenceApp"
+  "name": "Dare You",
+  "displayName": "Dare You",
+  "slug": "dare-you",
+  "privacy": "public",
+  "version": "1.0.0",
+  "platforms": ["ios", "android"],
+  "icon": "./src/assets/resources/icon.png",
+  "splash": {
+    "backgroundColor": "#3E46AB",
+    "resizeMode": "cover",
+    "image": "./src/assets/resources/splash.png"
+  }
+
 }

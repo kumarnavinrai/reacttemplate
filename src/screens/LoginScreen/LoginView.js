@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  ScrollView, View, Text, Image, Button
+  ScrollView, View, Text, Image, Button, TextInput, TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import styles from './style.js';
@@ -13,6 +13,7 @@ class LoginView extends Component {
     super(props);
     this.state = {
       conference: {},
+      showLogin: true,
     };
   }
 
@@ -37,38 +38,98 @@ class LoginView extends Component {
       
   }
 
+  showLoginSetSate = () =>
+  {
+    this.setState({showLogin: false})  
+  }
+
+  showSignUpSetSate = () =>
+  {
+    this.setState({showLogin: true})      
+  }
+
   render() {
     return (
-      <ScrollView>
-        <Image
-          source={{uri: this.props.conference.banner}}
-          style={styles.banner}
-        />
-        <View style={styles.container}>
-          <Text style={styles.title}>Login-{this.props.conference.name}</Text>
-          <View style={styles.info}>
-            <Icon.Button name="calendar" backgroundColor="transparent" color={config.PRIMARY_BG_COLOR}>
-              <Text>{this.props.conference.date}</Text>
-            </Icon.Button>
-            <Icon.Button name="map-pin" backgroundColor="transparent" color={config.PRIMARY_BG_COLOR}>
-              <Text>{(this.props.conference.location||{}).city}</Text>
-            </Icon.Button>
-          </View>
-          <Text style={styles.description}>{this.props.conference.description}</Text>
-          <Button onPress = { this.FunctionToOpenSecondActivity } title = 'Click Here'/>
-          <View style={styles.author}>
-            <Image
-              source={{uri: 'https://avatars3.githubusercontent.com/u/17863319?s=460&v=4'}}
-              style={styles.avatar}
-            />
-            <View>
-              <Text style={styles.name}>App Developer Info:</Text>
-              <Text>Lex Martinez</Text>
-              <Text style={styles.link}>me@lexmartinez.com</Text>
-            </View>
-          </View>
-        </View>
+      <ScrollView style={styles.outerscrollview}>
+          <View style={styles.outerview}>
+                <View>
+                {
+                  this.state.showLogin ? <Text style={styles.titlesignup}>If you dare...</Text> : null
+                }
+                </View>
+                <View>
+                {
+                  !this.state.showLogin ? <Text style={styles.titlesignup}>Welcome back</Text> : null
+                }
+                </View>
+
+                <View style={{margin:"5%"}} />
+
+                <View style={styles.signupandlogintext}>
+
+                    <TouchableOpacity onPress={ this.showSignUpSetSate } >
+                      <Text style={styles.linksignup}>Sign Up </Text>
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity onPress={ this.showLoginSetSate } >
+                      <Text style={styles.linklogin}> Login</Text>
+                    </TouchableOpacity>
+              
+                </View>
+
+                <View style={{margin:"5%"}} />
+    
+                <View>
+                {
+                  !this.state.showLogin ? <TextInput placeholder='Username' /> : null
+                }
+                </View>
+
+                <View>
+                {
+                  !this.state.showLogin ? <TextInput placeholder='Password' />  : null
+                }
+                </View>    
+
+               
+                
+                <View>
+                {
+                  this.state.showLogin ? <TextInput placeholder='Username' />  : null
+                }
+                </View>   
+                 
+                <View>
+                {
+                  this.state.showLogin ? <TextInput placeholder='Phone Number' />  : null
+                }
+                </View>  
+                
+                <View>
+                {
+                  this.state.showLogin ? <TextInput placeholder='Password' />  : null
+                }
+                </View>
+                
+                
+                <View style={{margin:"30%"}} />
+
+                <View>
+                {
+                  this.state.showLogin ? <Button onPress = { this.FunctionToOpenSecondActivity } title="Create Account"  />: <Button onPress = { this.FunctionToOpenSecondActivity } title="Login"  />
+                }
+                </View>
+
+                <View style={{margin:"2%"}} />
+
+                <View>
+                  <Text style={{fontSize: 12}}>By signing up agree to our terms of service and privacy policy</Text>
+                </View>
+                
+                
+          </View>      
       </ScrollView>
+      
     );
   }
 

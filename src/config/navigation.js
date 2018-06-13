@@ -10,13 +10,14 @@ export default StackNavigator({
   Main: {
         screen: LandingScreen,
         navigationOptions: (props) => ({
-            title: "Landing",
+            title: "",
+            header: null
         })
   },
   LoginScreen: {
         screen: LoginScreen,
         navigationOptions: (props) => ({
-            title: "Login",
+            title: "",
         })
   },
   TabScreen: {
@@ -62,7 +63,6 @@ export default StackNavigator({
             }
 
             return <FontAwesome name={iconName} size={25} color={tintColor} />;
-            return <Icon name={iconName} size={25} color={tintColor} />;
           }
         }),
         tabBarOptions: {

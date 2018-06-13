@@ -7,10 +7,18 @@ import thunkMiddleware from 'redux-thunk';
 import reducers from './src/reducers/index';
 import config from "./src/config";
 import logger from 'redux-logger';
+import { Font } from 'expo';
 
 const store = createStore(reducers, applyMiddleware(thunkMiddleware, logger));
 
 export default class App extends Component {
+
+ componentDidMount() {
+    Font.loadAsync({
+      'feather': require('./src/assets/resources/feather.ttf'),
+    });
+  }
+  
   render() {
     console.disableYellowBox = true;
     return (

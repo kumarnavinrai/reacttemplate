@@ -1,10 +1,10 @@
 {
-  "name": "conference-app",
+  "name": "DareYou",
   "version": "0.0.1",
-  "description": "A Sample Conference App built with React Native",
+  "description": "Dare you challange video",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lexmartinez/conference-app.git"
+    "url": "git+https://github.com/kumarnavinrai/reacttemplate.git"
   },
   "keywords": [
     "react-native",
@@ -14,12 +14,12 @@
     "redux",
     "jsx"
   ],
-  "author": "Lex Martinez<lex0316@gmail.com>",
+  "author": "Navin Kumar<navin.kumar@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lexmartinez/conference-app/issues"
+    "url": "https://github.com/kumarnavinrai/reacttemplate/issues"
   },
-  "homepage": "https://github.com/lexmartinez/conference-app",
+  "homepage": "https://github.com/kumarnavinrai/reacttemplate",
   "devDependencies": {
     "jest-expo": "26.0.0",
     "react-native-scripts": "1.13.1",
