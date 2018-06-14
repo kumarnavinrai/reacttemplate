@@ -39,21 +39,7 @@ class ScheduleView extends Component {
 
   render() {
     return (
-      <View>
-        <SearchBar
-          icon={{ type: 'feather', name: 'search' }}
-          clearIcon={{ type: 'feather', name: 'x' }}
-          onChangeText={(search) => {
-            if(search === ''){
-              this.setState({events:this.props.conference.events});
-            } else {
-              this.setState({events:this.props.conference.events.filter(item => {
-                return JSON.stringify(item.data).toLowerCase().indexOf(search.toLowerCase()) > -1
-              })});
-            }
-          }}
-          placeholder='Search ...' 
-          cancelButtonTitle="Cancel"/>
+      <View style={{backgroundColor: config.PRIMARY_BG_COLOR}}>
         <SectionList
           renderItem={({ item, index, section }) => <ListItem containerStyle={{borderLeftColor: item.color, borderLeftWidth: 6}} key={index} title={item.name} subtitle={item.time + ' ' + item.place} onPress={()=>this.setState({event: item, modal: true})}/>}
           renderSectionHeader={({ section: { title } }) => <ListItem title={title}

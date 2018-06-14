@@ -27,15 +27,13 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'powderblue'
+    alignItems: 'center'
   },
   dareyoutext: {
     width: 350, 
     height: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: "25%", 
     backgroundColor: 'skyblue'
   },
    youtext: {
@@ -43,7 +41,6 @@ export default StyleSheet.create({
     height: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: "5%", 
     backgroundColor: 'steelblue'
   },
   darename: {
@@ -72,10 +69,16 @@ export default StyleSheet.create({
     height: 25,
     backgroundColor: 'steelblue'
   },
+  dareyouwarp: {
+    flex: 1
+  },
+  midtextwarp: {
+    flex: 2
+  },
   btnwrap: {
+    flex: 3,
     width: 350,  
     height: 80,
-    marginTop: "35%",
     backgroundColor: 'skyblue'
   },
   submitstart:{

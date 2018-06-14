@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View, Text, AsyncStorage } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import { ListItem, Card } from 'react-native-elements';
 import Modal from 'react-native-modal';
 import config from '../../config';
 import { Button } from 'react-native-elements';
 
-class SpeakersView extends Component {
+class ChallengeView extends Component {
 
   constructor(props) {
     super(props);
@@ -21,7 +21,14 @@ class SpeakersView extends Component {
   componentDidMount() {
     const { getInfo } = this.props;
     getInfo();
-    this.setState({speaker: {},modal: false})
+    this.setState({speaker: {},modal: false});
+
+    const LOGIN_KEY = 'LOGIN_KEY';
+    AsyncStorage.getItem(LOGIN_KEY).then((settingsStr)=>{
+      alert(settingsStr);
+    });
+
+    alert(this.state.showLogin);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -37,7 +44,7 @@ class SpeakersView extends Component {
 
   render() {
     return (
-      <View style={{ backgroundColor: '#FF3A65' }}>
+      <View style={{ backgroundColor: '#3E46AB' }}>
         {
           this.state.conference.speakers.map((l, i) => (
             <ListItem
@@ -85,10 +92,10 @@ class SpeakersView extends Component {
 
 }
 
-SpeakersView.propTypes = {
+ChallengeView.propTypes = {
   getInfo: PropTypes.func.isRequired,
   navigation: PropTypes.object.isRequired,
   conference: PropTypes.object.isRequired
 };
 
-export default SpeakersView;
+export default ChallengeView;

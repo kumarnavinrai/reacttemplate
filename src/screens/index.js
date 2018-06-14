@@ -4,6 +4,7 @@ import SpeakersScreen from './SpeakersScreen';
 import ScheduleScreen from './ScheduleScreen';
 import LandingScreen from './LandingScreen';
 import LoginScreen from './LoginScreen';
+import ChallangeScreen from './ChallangeScreen';
 
 export {
   AboutScreen,
@@ -11,5 +12,6 @@ export {
   SpeakersScreen,
   ScheduleScreen,
   LandingScreen,
-  LoginScreen
+  LoginScreen,
+  ChallangeScreen
 };

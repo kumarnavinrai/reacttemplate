@@ -42,29 +42,30 @@ class LandingView extends Component {
     return (
       <ScrollView>
         <View style={styles.landingp}>
-          <View style={styles.dareyoutext}>
-              <Text style={styles.darename}>DARE</Text>
-          </View>
-          <View style={styles.youtext}>
-              <Text style={styles.darename}>YOU</Text>
-          </View>
-          <View style={styles.areyouup}>
-              <Text style={styles.areyouname}>Are you up for</Text>
-          </View>
-          <View style={styles.thec}>
-              <Text style={styles.thecname}>the challenge?</Text>
-          </View>
-          <View style={styles.btnwrap}>
-              
-              <TouchableHighlight
-                style={styles.submitstart}
-                onPress={() => this.FunctionToOpenSecondActivity(this.props)}
-                underlayColor='#fff'>
-                  <Text style={styles.submitstartText}>Start</Text>
-              </TouchableHighlight>
-          </View>
-          
-         
+            <View style={styles.dareyouwarp}>  
+              <View style={styles.dareyoutext}>
+                  <Text style={styles.darename}>DARE</Text>
+              </View>
+              <View style={styles.youtext}>
+                  <Text style={styles.darename}>YOU</Text>
+              </View>
+            </View>  
+            <View style={styles.midtextwarp}>
+              <View style={styles.areyouup}>
+                  <Text style={styles.areyouname}>Are you up for</Text>
+              </View>
+              <View style={styles.thec}>
+                  <Text style={styles.thecname}>the challenge?</Text>
+              </View>
+            </View>  
+            <View style={styles.btnwrap}>
+                <TouchableHighlight
+                  style={styles.submitstart}
+                  onPress={() => this.FunctionToOpenSecondActivity(this.props)}
+                  underlayColor='#fff'>
+                    <Text style={styles.submitstartText}>Start</Text>
+                </TouchableHighlight>
+            </View>
         </View>
       </ScrollView>
     );

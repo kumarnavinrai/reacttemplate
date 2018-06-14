@@ -15,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-class Header extends Component {
+class HeaderLogin extends Component {
 
   constructor(props) {
     super(props);
@@ -49,7 +49,7 @@ class Header extends Component {
       );
     } else {
       return (
-        <View style={{flex:1, alignItems: "center"}}>
+        <View style={{flex:1, alignItems: "center", backgroundColor:'#3E46AB', height: 70 }}>
           <Text style={{color: config.SECONDARY_BG_COLOR, fontSize: 18, fontWeight: "700"}}></Text>
         </View>
       );
@@ -58,9 +58,9 @@ class Header extends Component {
   }
 }
 
-Header.propTypes = {
+HeaderLogin.propTypes = {
   getInfo: PropTypes.func.isRequired,
   conference: PropTypes.object.isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderLogin);

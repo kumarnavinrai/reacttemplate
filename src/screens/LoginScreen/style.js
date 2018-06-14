@@ -33,7 +33,17 @@ export default StyleSheet.create({
     textAlign: 'justify'
   },
   outerview: {
-    backgroundColor:'#3E46AB'
+    backgroundColor:'#3E46AB',
+    flex: 1
+  },
+  firstinner: {
+    flex: 1
+  },
+  secondinner: {
+    flex: 2
+  },
+  thirdinner: {
+    flex: 3
   },
   outerscrollview: {
     backgroundColor:'#3E46AB',
@@ -74,6 +84,81 @@ export default StyleSheet.create({
   linksignup: {
     color: '#ffffff',
     fontSize: 15
+  },
+   btnwrap: {
+    width: 340,  
+    height: 80
+  },
+  submitstart:{
+    marginRight:30,
+    marginLeft:30,
+    marginTop:10,
+    paddingTop:20,
+    paddingBottom:20,
+    backgroundColor:'#0AE88B',
+    borderRadius:30,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  submitstart:{
+    marginRight:30,
+    marginLeft:30,
+    marginTop:10,
+    paddingTop:20,
+    paddingBottom:20,
+    backgroundColor:'#0AE88B',
+    borderRadius:30,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  MainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#3E46AB',
+  },
+  SubmitButtonStyle: {
+ 
+    marginTop:0,
+    paddingTop:15,
+    paddingBottom:15,
+    marginLeft:30,
+    marginRight:30,
+    backgroundColor:'#0AE88B',
+    borderRadius:25,
+    borderWidth: 0,
+    borderColor: '#fff'
+  },
+  LoginSubmitButtonStyle: {
+ 
+    marginTop:0,
+    paddingTop:15,
+    paddingBottom:15,
+    marginLeft:30,
+    marginRight:30,
+    backgroundColor:'#0CB3FF',
+    borderRadius:25,
+    borderWidth: 0,
+    borderColor: '#fff'
+  },
+  TextStyle:{
+      color:'#fff',
+      textAlign:'center',
+  },
+  signupbtn:{
+    paddingTop:20,
+    paddingBottom:20,
+    backgroundColor:'#0AE88B',
+    borderRadius:30,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  submitstartText:{
+      color:'#fff',
+      textAlign:'center',
+  },
+  BottomTextStyle:{
+      color:'#fff',
+      textAlign:'center',
   },
   link: {
     color: '#255899'
